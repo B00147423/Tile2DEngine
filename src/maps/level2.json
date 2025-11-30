@@ -1,0 +1,17 @@
+{
+    "camera": {
+        "height": 2000.0,
+        "width": 2000.0,
+        "x": -19.200000762939453,
+        "y": 23.199995040893555,
+        "zoom": 0.42409753799438477
+    },
+    "entities": [],
+    "grid": {
+        "cellHeight": 16.0,
+        "cellWidth": 16.0,
+        "cols": 30,
+        "rows": 20
+    },
+    "sceneName": "level2"
+}

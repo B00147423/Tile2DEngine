@@ -1,0 +1,17 @@
+{
+    "camera": {
+        "height": 878.0,
+        "width": 1823.0,
+        "x": 0.0,
+        "y": 0.0,
+        "zoom": 0.42409753799438477
+    },
+    "entities": [],
+    "grid": {
+        "cellHeight": 16.0,
+        "cellWidth": 16.0,
+        "cols": 30,
+        "rows": 20
+    },
+    "sceneName": "THISISNEWSCENE"
+}

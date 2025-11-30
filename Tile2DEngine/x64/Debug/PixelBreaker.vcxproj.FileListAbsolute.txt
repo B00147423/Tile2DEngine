@@ -1,0 +1,2 @@
+C:\Users\beka\PixelBreaker\x64\Debug\glfw3.dll
+C:\Users\beka\PixelBreaker\Tile2DEngine\x64\Debug\PixelBre.A4369281.Up2Date

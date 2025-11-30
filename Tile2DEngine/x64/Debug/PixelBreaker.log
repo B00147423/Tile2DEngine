@@ -1,0 +1,27 @@
+﻿  camera.cpp
+  Editor.cpp
+  Editor_ImGui.cpp
+C:\Users\beka\PixelBreaker\src\editor\Editor_ImGui.cpp(5,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Editor_Inpui.cpp
+  Editor_Render.cpp
+C:\Users\beka\PixelBreaker\src\editor\Editor_Render.cpp(156,47): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\beka\PixelBreaker\src\editor\Editor_Render.cpp(183,42): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  Editor_Scene.cpp
+C:\Users\beka\PixelBreaker\src\editor\Editor_Scene.cpp(104,65): warning C4566: character represented by universal-character-name '\u2192' cannot be represented in the current code page (1252)
+  SceneSerializer.cpp
+  Shader.cpp
+  main.cpp
+  stb_impl.cpp
+  Texture.cpp
+  window.cpp
+  ImGuizmo.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Generating Code...
+  PixelBreaker.vcxproj -> C:\Users\beka\PixelBreaker\x64\Debug\Tile2DEngine.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

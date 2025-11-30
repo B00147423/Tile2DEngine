@@ -1,0 +1,16 @@
+﻿# PixelBreaker
+
+PixelBreaker is a 2D Breakout-style arcade game built in C++ with OpenGL.  
+It features custom rendering, input handling, power-ups, and polished effects.
+
+---
+
+## Setup Instructions (Windows + Visual Studio)
+
+### 1. Install vcpkg (once)
+If you don’t already have vcpkg:
+```powershell
+git clone https://github.com/microsoft/vcpkg
+cd vcpkg
+.\bootstrap-vcpkg.bat
+.\vcpkg integrate install
