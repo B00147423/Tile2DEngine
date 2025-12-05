@@ -2,7 +2,7 @@
 #include <string>
 
 struct Entity {
-    int id;             // ✅ add this
+    int id;           
     std::string type = "";
     float x = 0.0f;
     float y = 0.0f;
