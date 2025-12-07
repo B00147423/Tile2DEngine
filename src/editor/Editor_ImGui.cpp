@@ -1,5 +1,13 @@
 ﻿#include "Editor.h"
+#include "AssetManager.h"
 
+/**
+ * Render ImGui panel: Draws the left-side editor panel UI.
+ * Creates a fixed-size window on the left (kLeftPanelWidth wide) containing:
+ * grid settings (cell width/height), camera view settings (game box size),
+ * scene info, asset browser with clickable thumbnails, layer selector,
+ * and save/load buttons. This is the main UI the user interacts with.
+ */
 void Editor::renderImGuiPanel() {
     ImGui::SetNextWindowPos(ImVec2(0, 0));
     ImGui::SetNextWindowSize(ImVec2(kLeftPanelWidth, windowHeight));
@@ -35,38 +43,25 @@ void Editor::renderImGuiPanel() {
         int count = 0;
 
         for (const auto& asset : assetList) {
-            Texture* tex = nullptr;
+            std::string path = "src/assets/" + asset + ".png";
+            GLuint texID = AssetManager::GetGPUHandle(path);
 
-            // Cache texture (load once)
-            if (m_textureCache.count(asset))
-                tex = m_textureCache[asset];
-            else {
-                std::string path = "src/assets/" + asset + ".png";
-                tex = new Texture(path);
-                if (!tex || tex->id == 0) {
-                    std::cerr << " Failed to load texture: " << path << std::endl;
-                    continue;
-                }
-                m_textureCache[asset] = tex;
+            if (texID == 0) {
+                std::cerr << "Texture not found in AssetManager: " << path << std::endl;
+                continue;
             }
 
-            // Safety: Skip if still invalid
-            if (!tex || tex->id == 0)
-                continue;
-
             ImGui::PushID(asset.c_str());
-
-            // Create ImTextureRef safely
-            ImTextureRef texRef = { (ImTextureID)(intptr_t)tex->id };
+            ImTextureRef texRef = { (ImTextureID)(intptr_t)texID };
 
             if (ImGui::ImageButton(
                 ("##" + asset).c_str(),
                 texRef,
                 ImVec2(48, 48),
-                ImVec2(0, 1),
-                ImVec2(1, 0),
+                ImVec2(0, 1), ImVec2(1, 0),
                 ImVec4(0, 0, 0, 0),
-                ImVec4(1, 1, 1, 1))) {
+                ImVec4(1, 1, 1, 1)))
+            {
                 selectedType = asset;
                 std::cout << "Selected: " << asset << std::endl;
             }
@@ -93,6 +88,12 @@ void Editor::renderImGuiPanel() {
     ImGui::End();
 
 }
+/**
+ * Save scene dialog: Shows ImGui UI for saving scenes.
+ * If currentScene.path is set, "Save" button saves immediately. Otherwise, shows
+ * an input field for scene name and saves as "./src/maps/[name].map". Handles
+ * both quick save and "Save As" scenarios. Updates currentScene.path after saving.
+ */
 void Editor::saveSceneDialog() {
     static bool showSaveAs = false;
     static char input[128] = "";
@@ -123,6 +124,12 @@ void Editor::saveSceneDialog() {
     }
 }
 
+/**
+ * Open scene dialog: Shows an ImGui modal window listing all available .map and .json files.
+ * Scans the ./src/maps directory, displays each scene file as a clickable item.
+ * When clicked, calls loadScene() with that file path and closes the dialog.
+ * Triggered by "Open Scene" button or File menu.
+ */
 void Editor::openSceneDialog() {
     static bool openScene = false;
     static std::string folder = "./src/maps";

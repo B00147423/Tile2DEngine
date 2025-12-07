@@ -1,53 +1,13 @@
 ﻿#include "Editor.h"
 
-static Editor* s_currentEditor = nullptr;
-static bool s_isPanning = false;
-static double s_lastX = 0.0, s_lastY = 0.0;
-
-// callbacks here (scroll, mouse_button, cursor_pos)
-void Editor::scroll_callback(GLFWwindow*, double, double yoffset) {
-    if (!s_currentGame) return;
-
-    const float zoomSpeed = 1.1f;
-    if (yoffset > 0)
-        s_currentGame->zoom /= zoomSpeed;
-    else if (yoffset < 0)
-        s_currentGame->zoom *= zoomSpeed;
-
-    s_currentGame->zoom = glm::clamp(s_currentGame->zoom, 0.1f, 100.0f);
-    s_currentGame->m_camera.setZoom(s_currentGame->zoom);
-}
-
-void Editor::mouse_button_callback(GLFWwindow* window, int button, int action, int) {
-    if (!s_currentGame) return;
-
-    if (button == GLFW_MOUSE_BUTTON_MIDDLE) {
-        if (action == GLFW_PRESS) {
-            s_isPanning = true;
-            glfwGetCursorPos(window, &s_lastX, &s_lastY);
-        }
-        else if (action == GLFW_RELEASE) {
-            s_isPanning = false;
-        }
-    }
-}
-
-void Editor::cursor_pos_callback(GLFWwindow* window, double xpos, double ypos) {
-    if (!s_currentGame || !s_isPanning) return;
-
-    double dx = xpos - s_lastX;
-    double dy = ypos - s_lastY;
-    s_lastX = xpos;
-    s_lastY = ypos;
-
-    float zoom = s_currentGame->m_camera.getZoom();
-    float moveFactor = (s_currentGame->cellWidth + s_currentGame->cellHeight) * 0.5f * 0.05f / zoom;
-
-    s_currentGame->cameraX -= static_cast<float>(dx) * moveFactor;
-    s_currentGame->cameraY += static_cast<float>(dy) * moveFactor;
-    s_currentGame->m_camera.setPosition(s_currentGame->cameraX, s_currentGame->cameraY);
-}
-
+/**
+ * Handle entity placement: Processes mouse clicks to place/remove entities on the grid.
+ * Gets mouse world position, snaps it to grid, then:
+ * - LEFT CLICK: Places a new entity at the snapped position (if not duplicate on same layer)
+ * - RIGHT CLICK: Removes any entity at the snapped position
+ * Prevents placing duplicates at the same position on the same layer. Sets
+ * entitiesNeedSorting=true when entities are added/removed. Called every frame.
+ */
 void Editor::handleEntityPlacement() {
     // Skip if mouse is over ImGui UI
     if (ImGui::GetIO().WantCaptureMouse)
@@ -61,18 +21,18 @@ void Editor::handleEntityPlacement() {
 
     // LEFT CLICK — place entity
     if (glfwGetMouseButton(m_window.getHandle(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
-        Entity e;
-        e.type = selectedType;
-        e.x = snappedX;
-        e.y = snappedY;
-        e.layer = placementLayer;   // ⭐ IMPORTANT ⭐
+        Entity entity;
+        entity.type = selectedType;
+        entity.x = snappedX;
+        entity.y = snappedY;
+        entity.layer = placementLayer;
 
         // Prevent duplicates only on SAME LAYER
         bool alreadyPlaced = false;
         for (auto& existing : currentScene.entities) {
-            if (existing.layer == e.layer &&         // ⭐ only block SAME layer
-                std::abs(existing.x - e.x) < 0.1f &&
-                std::abs(existing.y - e.y) < 0.1f)
+            if (existing.layer == entity.layer &&         // ⭐ only block SAME layer
+                std::abs(existing.x - entity.x) < 0.1f &&
+                std::abs(existing.y - entity.y) < 0.1f)
             {
                 alreadyPlaced = true;
                 break;
@@ -80,9 +40,10 @@ void Editor::handleEntityPlacement() {
         }
 
         if (!alreadyPlaced) {
-            currentScene.entities.push_back(e);
-            std::cout << "Placed entity: " << e.type
-                << " at (" << e.x << ", " << e.y << ")\n";
+            currentScene.entities.push_back(entity);
+            entitiesNeedSorting = true; // Mark for sorting
+            std::cout << "Placed entity: " << entity.type
+                << " at (" << entity.x << ", " << entity.y << ")\n";
         }
     }
 
@@ -94,12 +55,19 @@ void Editor::handleEntityPlacement() {
                 std::cout << "Removed entity: " << it->type
                     << " at (" << it->x << ", " << it->y << ")\n";
                 currentScene.entities.erase(it);
+                entitiesNeedSorting = true; // Mark for sorting
                 break;
             }
         }
     }
 }
 
+/**
+ * Process input: Handles keyboard input for camera movement (WASD keys).
+ * Moves the camera up/down/left/right based on key presses, with movement speed
+ * proportional to zoom level. Updates cameraX/cameraY and syncs to the Camera object.
+ * Currently not called in run() loop -  code for future use if needed.
+ */
 void Editor::processInput() {
     GLFWwindow* handle = m_window.getHandle();
     const float moveSpeed = 10.0f * zoom;
@@ -112,6 +80,12 @@ void Editor::processInput() {
     m_camera.setPosition(cameraX, cameraY);
 }
 
+/**
+ * Get mouse world position: Converts screen mouse coordinates to world/grid coordinates.
+ * Takes the window mouse position, accounts for the left panel offset, flips Y axis
+ * (OpenGL Y=0 is bottom), converts to viewport space, then applies camera zoom and
+ * position to get the final world coordinates. Used for placing entities at the cursor.
+ */
 glm::vec2 Editor::getMouseWorldPosition() {
     double mouseX, mouseY;
     glfwGetCursorPos(m_window.getHandle(), &mouseX, &mouseY);
