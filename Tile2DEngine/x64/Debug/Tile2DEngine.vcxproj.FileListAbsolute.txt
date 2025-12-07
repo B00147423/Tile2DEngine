@@ -1,0 +1,2 @@
+C:\Users\beka\Tile2DEngine\x64\Debug\glfw3.dll
+C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Tile2DEn.87ADBF2C.Up2Date

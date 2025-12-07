@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Tile2DEngine\\x64\\Debug\\AssetManager.obj",
+            "outputs": [
+                "Tile2DEngine\\x64\\Debug\\AssetManager.h_ADB1A49A98E306C7.ifc.dt.module.json",
+                "Tile2DEngine\\x64\\Debug\\AssetManager.h_ADB1A49A98E306C7.ifc.dt.d.json",
+                "Tile2DEngine\\x64\\Debug\\AssetManager.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\beka\\Tile2DEngine\\src\\editor\\AssetManager.h",
+                    "source-path": "c:\\users\\beka\\tile2dengine\\src\\editor\\assetmanager.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
