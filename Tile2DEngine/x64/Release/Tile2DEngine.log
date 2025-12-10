@@ -1,0 +1,442 @@
+﻿  camera.cpp
+  AssetManager.cpp
+C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(26,17): error C2429: language feature 'structured bindings' requires compiler flag '/std:c++17'
+C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(75,17): error C2429: language feature 'structured bindings' requires compiler flag '/std:c++17'
+C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(92,9): error C2198: 'PFNGLTEXIMAGE2DPROC': too few arguments for call
+C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(103,19): error C2593: 'operator <<' is ambiguous
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(480,39):
+      could be 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_streambuf<char,std::char_traits<char>> *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(448,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(const void *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(430,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long double)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(412,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(394,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(float)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(376,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(358,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(__int64)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(340,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned long)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(322,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(303,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(277,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(258,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(224,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(short)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(206,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(bool)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(200,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::ios_base &(__cdecl *)(std::ios_base &))'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(194,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(189,39):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(std::basic_ostream<char,std::char_traits<char>> &(__cdecl *)(std::basic_ostream<char,std::char_traits<char>> &))'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\thread(298,26):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,std::thread::id)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(688,32):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(732,32):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(768,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(813,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,char)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(930,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const signed char *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(936,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,signed char)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(941,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const unsigned char *)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(947,31):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,unsigned char)'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\__msvc_ostream.hpp(1031,32):
+      or       'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<char,std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const std::error_code &)'
+      C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(103,19):
+      while trying to match the argument list '(std::basic_ostream<char,std::char_traits<char>>, <error type>)'
+  
+C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp(138,17): error C2429: language feature 'structured bindings' requires compiler flag '/std:c++17'
+  Editor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/editor/Editor.cpp')
+  
+  Editor_ImGui.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/editor/Editor_ImGui.cpp')
+  
+  Editor_Input.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/editor/Editor_Input.cpp')
+  
+  Editor_Render.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/editor/Editor_Render.cpp')
+  
+  Editor_Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/editor/Editor_Scene.cpp')
+  
+  AssetManager.h
+  SceneSerializer.cpp
+  Shader.cpp
+  TextureData.cpp
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\beka\Tile2DEngine\src\Editor\Editor.h(23,10): error C1083: Cannot open include file: 'backends/imgui_impl_glfw.h': No such file or directory
+  (compiling source file 'src/main.cpp')
+  
+  stb_impl.cpp
+  window.cpp
+  ImGuizmo.cpp
+  imgui_impl_glfw.cpp
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(286,39): error C2065: 'ImGuiKey_Oem102': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(287,39): error C2065: 'ImGuiKey_Oem102': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(508,26): error C2065: 'ImGuiConfigFlags_ViewportsEnable': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(662,28): error C2065: 'ImGuiBackendFlags_PlatformHasViewports': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(665,24): error C2065: 'ImGuiBackendFlags_HasMouseHoveredViewport': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(807,128): error C2065: 'ImGuiBackendFlags_PlatformHasViewports': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(807,169): error C2065: 'ImGuiBackendFlags_HasMouseHoveredViewport': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(820,37): error C2039: 'Viewports': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(822,47): error C2039: 'Viewports': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(842,38): error C2065: 'ImGuiConfigFlags_ViewportsEnable': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(868,57): error C2065: 'ImGuiViewportFlags_NoInputs': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(868,20): error C2737: 'window_no_input': const object must be initialized
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(879,27): error C2065: 'ImGuiBackendFlags_HasMouseHoveredViewport': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(880,12): error C2039: 'AddMouseViewportEvent': is not a member of 'ImGuiIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(2227,8):
+      see declaration of 'ImGuiIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(892,37): error C2039: 'Viewports': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(894,55): error C2039: 'Viewports': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(972,17): error C2039: 'Monitors': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(975,9): error C2065: 'ImGuiPlatformMonitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(975,30): error C2146: syntax error: missing ';' before identifier 'monitor'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(975,30): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(981,9): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(981,27): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(982,9): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(982,28): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(988,13): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(989,13): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(995,9): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(996,9): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(997,21): error C2039: 'Monitors': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(997,40): error C2065: 'monitor': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1152,42): error C2039: 'FindViewportByPlatformHandle': is not a member of 'ImGui'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(235,11):
+      see declaration of 'ImGui'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1152,42): error C3861: 'FindViewportByPlatformHandle': identifier not found
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1153,19): error C2039: 'PlatformRequestClose': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1164,42): error C2039: 'FindViewportByPlatformHandle': is not a member of 'ImGui'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(235,11):
+      see declaration of 'ImGui'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1164,42): error C3861: 'FindViewportByPlatformHandle': identifier not found
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1166,87): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1173,19): error C2039: 'PlatformRequestMove': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1179,42): error C2039: 'FindViewportByPlatformHandle': is not a member of 'ImGui'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(235,11):
+      see declaration of 'ImGui'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1179,42): error C3861: 'FindViewportByPlatformHandle': identifier not found
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1181,87): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1188,19): error C2039: 'PlatformRequestResize': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1196,15): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1210,55): error C2065: 'ImGuiViewportFlags_NoDecoration': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1210,5): error C2660: 'glfwWindowHint': function does not take 1 arguments
+      C:\Users\beka\vcpkg\installed\x64-windows\include\GLFW\glfw3.h(3053,14):
+      see declaration of 'glfwWindowHint'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1210,5):
+      while trying to match the argument list '(int)'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1212,54): error C2065: 'ImGuiViewportFlags_TopMost': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1212,5): error C2660: 'glfwWindowHint': function does not take 1 arguments
+      C:\Users\beka\vcpkg\installed\x64-windows\include\GLFW\glfw3.h(3053,14):
+      see declaration of 'glfwWindowHint'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1212,5):
+      while trying to match the argument list '(int)'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1248,83): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1269,15): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1274,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1279,27): error C2065: 'ImGuiViewportFlags_NoTaskBarIcon': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1310,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1318,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1325,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1333,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1350,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1358,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1365,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1375,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1381,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1388,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1396,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1404,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1434,79): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1447,17): error C2039: 'Platform_CreateWindow': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1448,17): error C2039: 'Platform_DestroyWindow': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1449,17): error C2039: 'Platform_ShowWindow': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1450,17): error C2039: 'Platform_SetWindowPos': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1451,17): error C2039: 'Platform_GetWindowPos': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1452,17): error C2039: 'Platform_SetWindowSize': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1453,17): error C2039: 'Platform_GetWindowSize': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1454,17): error C2039: 'Platform_GetWindowFramebufferScale': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1455,17): error C2039: 'Platform_SetWindowFocus': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1456,17): error C2039: 'Platform_GetWindowFocus': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1457,17): error C2039: 'Platform_GetWindowMinimized': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1458,17): error C2039: 'Platform_SetWindowTitle': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1459,17): error C2039: 'Platform_RenderWindow': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1460,17): error C2039: 'Platform_SwapBuffers': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1462,17): error C2039: 'Platform_SetWindowAlpha': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1465,17): error C2039: 'Platform_CreateVkSurface': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1474,20): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1480,12): error C2039: 'DestroyPlatformWindows': is not a member of 'ImGui'
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(235,11):
+      see declaration of 'ImGui'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1480,12): error C3861: 'DestroyPlatformWindows': identifier not found
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_glfw.cpp(1504,87): error C2039: 'PlatformUserData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+  imgui_impl_opengl3.cpp
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.h(45,25): error C2182: 'ImGui_ImplOpenGL3_UpdateTexture': this use of 'void' is not valid
+  (compiling source file 'vendor/imgui/backends/imgui_impl_opengl3.cpp')
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.h(45,57): error C2065: 'ImTextureData': undeclared identifier
+  (compiling source file 'vendor/imgui/backends/imgui_impl_opengl3.cpp')
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.h(45,72): error C2065: 'tex': undeclared identifier
+  (compiling source file 'vendor/imgui/backends/imgui_impl_opengl3.cpp')
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(372,24): error C2065: 'ImGuiBackendFlags_RendererHasTextures': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(373,24): error C2065: 'ImGuiBackendFlags_RendererHasViewports': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(376,17): error C2039: 'Renderer_TextureMaxWidth': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(376,56): error C2039: 'Renderer_TextureMaxHeight': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(432,67): error C2065: 'ImGuiBackendFlags_RendererHasTextures': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(432,107): error C2065: 'ImGuiBackendFlags_RendererHasViewports': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(539,20): error C2039: 'Textures': is not a member of 'ImDrawData'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3224,8):
+      see declaration of 'ImDrawData'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(540,14): error C2065: 'ImTextureData': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(540,29): error C2065: 'tex': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(540,33): error C2143: syntax error: missing ';' before ':'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(540,47): error C2039: 'Textures': is not a member of 'ImDrawData'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3224,8):
+      see declaration of 'ImDrawData'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(540,55): error C2143: syntax error: missing ';' before ')'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(541,17): error C2065: 'tex': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(541,32): error C2065: 'ImTextureStatus_OK': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(542,49): error C2065: 'tex': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(712,13): error C2182: 'ImGui_ImplOpenGL3_DestroyTexture': this use of 'void' is not valid
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(712,46): error C2065: 'ImTextureData': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(712,61): error C2065: 'tex': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(713,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(714,42): error C2065: 'tex': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C3927: '->': trailing return type is not allowed after a non-function declarator
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C3484: syntax error: expected '->' before the return type
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C3613: missing return type after '->' ('int' assumed)
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C2371: 'imgl3wProcs': redefinition; different basic types
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3_loader.h(910,28):
+      see declaration of 'imgl3wProcs'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(715,5): error C2146: syntax error: missing ';' before identifier 'gl'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(718,5): error C3927: '->': trailing return type is not allowed after a non-function declarator
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(718,10): error C3613: missing return type after '->' ('int' assumed)
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(718,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(718,10): error C2146: syntax error: missing ';' before identifier 'SetTexID'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(719,5): error C3927: '->': trailing return type is not allowed after a non-function declarator
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(719,10): error C3613: missing return type after '->' ('int' assumed)
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(719,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(719,5): error C2086: 'int tex': redefinition
+      C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(718,5):
+      see declaration of 'tex'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(719,10): error C2146: syntax error: missing ';' before identifier 'SetStatus'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(720,1): error C2059: syntax error: '}'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(720,1): error C2143: syntax error: missing ';' before '}'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(723,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(723,1): error C2447: '{': missing function header (old-style formal list?)
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1034,10): error C2065: 'ImTextureData': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1034,29): error C2143: syntax error: missing ';' before ':'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1034,54): error C2039: 'Textures': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1034,62): error C2143: syntax error: missing ';' before ')'
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1036,13): error C2064: term does not evaluate to a function taking 1 arguments
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1047,29): error C2065: 'ImGuiViewportFlags_NoRendererClear': undeclared identifier
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1053,48): error C2039: 'DrawData': is not a member of 'ImGuiViewport'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3525,8):
+      see declaration of 'ImGuiViewport'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1059,17): error C2039: 'Renderer_RenderWindow': is not a member of 'ImGuiPlatformIO'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3550,8):
+      see declaration of 'ImGuiPlatformIO'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1064,12): error C2039: 'DestroyPlatformWindows': is not a member of 'ImGui'
+      C:\Users\beka\vcpkg\installed\x64-windows\include\imgui.h(3604,11):
+      see declaration of 'ImGui'
+  
+C:\Users\beka\Tile2DEngine\vendor\imgui\backends\imgui_impl_opengl3.cpp(1064,12): error C3861: 'DestroyPlatformWindows': identifier not found
+  imgui.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  Compiling...
+  imgui_widgets.cpp
