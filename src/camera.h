@@ -54,6 +54,18 @@ public:
     float getZoom() const;
     
     /**
+     * Get virtual width: Returns the virtual viewport width.
+     * This is the base coordinate system width used for calculations.
+     */
+    float getVirtualWidth() const;
+    
+    /**
+     * Get virtual height: Returns the virtual viewport height.
+     * This is the base coordinate system height used for calculations.
+     */
+    float getVirtualHeight() const;
+    
+    /**
      * Get projection: Computes and returns the orthographic projection matrix.
      * Calculates the view frustum based on position, zoom, virtual size, and aspect ratio.
      * This matrix transforms world coordinates to clip space. Called every frame for rendering.

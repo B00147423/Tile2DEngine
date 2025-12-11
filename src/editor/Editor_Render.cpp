@@ -10,6 +10,8 @@
  * uniform locations for performance. Called every frame.
  */
 void Editor::drawInfiniteGrid() {
+    // Don't update camera virtual size here - it causes zoom when editing red square
+    // Camera virtual size is set when loading scenes, not during editing
     m_camera.resize(windowWidth - kLeftPanelWidth, windowHeight);
     glm::mat4 proj = m_camera.getProjection();
 

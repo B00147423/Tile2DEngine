@@ -9,4 +9,6 @@ struct Scene {
     GridSettings grid;
     std::vector<Entity> entities;
     std::string path;
+    float gameViewWidth;   // Camera virtual width (red square width)
+    float gameViewHeight;  // Camera virtual height (red square height)
 };

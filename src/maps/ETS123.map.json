@@ -1,0 +1,567 @@
+{
+    "entities": [
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 344.0,
+            "y": 264.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 344.0,
+            "y": 280.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 8.0,
+            "y": 120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -8.0,
+            "y": 120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -8.0,
+            "y": 104.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -8.0,
+            "y": 88.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -24.0,
+            "y": 88.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -24.0,
+            "y": 72.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -24.0,
+            "y": 56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -40.0,
+            "y": 56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -40.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -56.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -56.0,
+            "y": 24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -72.0,
+            "y": 24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -72.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -88.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -104.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -120.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -136.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -152.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -168.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -184.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -200.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -216.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -232.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -232.0,
+            "y": 24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -248.0,
+            "y": 24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -248.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -264.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -264.0,
+            "y": 56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -280.0,
+            "y": 56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -280.0,
+            "y": 72.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 88.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 104.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 152.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -296.0,
+            "y": 168.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -280.0,
+            "y": 184.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -264.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -248.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -232.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -216.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -200.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -184.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -152.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -136.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -120.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -88.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -56.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -24.0,
+            "y": 216.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": -8.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 24.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 56.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 72.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 88.0,
+            "y": 200.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 120.0,
+            "y": 184.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 152.0,
+            "y": 184.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 168.0,
+            "y": 184.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 184.0,
+            "y": 184.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 200.0,
+            "y": 168.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 216.0,
+            "y": 168.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 232.0,
+            "y": 152.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 248.0,
+            "y": 152.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 264.0,
+            "y": 152.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 280.0,
+            "y": 136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 296.0,
+            "y": 136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 312.0,
+            "y": 120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 328.0,
+            "y": 120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 328.0,
+            "y": 104.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 344.0,
+            "y": 88.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": 72.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": 56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": 40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": 24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": 8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": -8.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": -24.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": -40.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 376.0,
+            "y": -56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": -56.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": -72.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 360.0,
+            "y": -88.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 344.0,
+            "y": -104.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 344.0,
+            "y": -120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 328.0,
+            "y": -120.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 312.0,
+            "y": -136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 296.0,
+            "y": -136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 280.0,
+            "y": -136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 264.0,
+            "y": -136.0
+        },
+        {
+            "layer": 0,
+            "type": "awesomeface",
+            "x": 248.0,
+            "y": -120.0
+        }
+    ],
+    "gameView": {
+        "height": 616.0,
+        "width": 808.0
+    },
+    "grid": {
+        "cellHeight": 16.0,
+        "cellWidth": 16.0,
+        "cols": 30,
+        "rows": 20
+    },
+    "sceneName": "Untitled"
+}

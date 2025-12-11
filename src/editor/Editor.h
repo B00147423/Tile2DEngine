@@ -38,9 +38,19 @@ namespace fs = std::filesystem;
 #include "Scene.h"
 #include "Shader.h"
 #include "EditorState.h"
+#include "./Editor_Imgui/GridModule.h"
+#include "./Editor_Imgui/CameraModule.h"
+#include "./Editor_Imgui/AssetModule.h"
+#include "./Editor_Imgui/LayerModule.h"
 
 class Editor {
+    friend struct PlayModule;  // Allow PlayModule to access private members
 public:
+
+    GridModule grid{ cellWidth, cellHeight };
+    CameraModule camera{ gameViewWidth, gameViewHeight };
+    AssetModule assets{ assetList, selectedType };
+    LayerModule layers{ placementLayer };
     /**
      * Constructor: Initializes the Editor with a reference to the Window.
      * Sets up GLFW user pointer for callbacks, initializes ImGui, loads shaders,

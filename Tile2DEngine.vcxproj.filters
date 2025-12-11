@@ -60,6 +60,21 @@
     <ClInclude Include="src\editor\TextureData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\editor\Editor_Imgui\EditorImguiModules.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editor\Editor_Imgui\GridModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editor\Editor_Imgui\CameraModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editor\Editor_Imgui\AssetModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\editor\Editor_Imgui\LayerModule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="vendor\imgui\backends\imgui_impl_opengl3.cpp">
@@ -95,7 +110,7 @@
     <ClCompile Include="src\editor\Editor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\editor\Editor_ImGui.cpp">
+    <ClCompile Include="src\editor\Editor_Imgui\Editor_ImGui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\editor\Editor_Scene.cpp">

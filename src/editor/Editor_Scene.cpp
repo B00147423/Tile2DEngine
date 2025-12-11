@@ -11,9 +11,10 @@ void Editor::newScene(const std::string& name) {
     currentScene.name = name;
     currentScene.grid = { cellWidth, cellHeight, 20, 30 };
     currentScene.entities.clear();
+    currentScene.gameViewWidth = gameViewWidth;   // Initialize from editor
+    currentScene.gameViewHeight = gameViewHeight;  // Initialize from editor
     entitiesNeedSorting = false; // No need to sort empty list
 }
-
 
 /**
  * Save scene: Saves the current scene to disk in both binary (.map) and JSON (.json) formats.
@@ -22,6 +23,10 @@ void Editor::newScene(const std::string& name) {
  * successful save. Prints errors if file operations fail. Called when user saves.
  */
 void Editor::saveScene(const std::string& path) {
+    // Sync current editor values to scene before saving
+    currentScene.gameViewWidth = gameViewWidth;
+    currentScene.gameViewHeight = gameViewHeight;
+    
     // Binary for runtime (fast)
     if (!SceneSerializer::saveBinary(currentScene, path + ".map")) {
         std::cerr << "Failed to save binary scene: " << path + ".map" << "\n";
@@ -52,7 +57,19 @@ void Editor::loadScene(const std::string& path) {
     }
 
     currentScene.path = path;
-    entitiesNeedSorting = true; // Mark for sorting after load
-    cachedTexturePaths.clear(); // Clear cache when loading new scene
-    std::cout << "Loaded binary scene: " << currentScene.name << " (" << path << ")\n";
+
+    // Set the name from the path (if the serializer didn't do it)
+    currentScene.name = fs::path(path).stem().string();
+
+    // Sync loaded scene values to editor UI
+    gameViewWidth = currentScene.gameViewWidth;
+    gameViewHeight = currentScene.gameViewHeight;
+    
+    // Update camera virtual size when loading scene (not during editing)
+    m_camera.setVirtualSize(gameViewWidth, gameViewHeight);
+
+    entitiesNeedSorting = true;
+    cachedTexturePaths.clear();
+
+    std::cout << "Loaded scene: " << currentScene.name << " (" << path << ")\n";
 }

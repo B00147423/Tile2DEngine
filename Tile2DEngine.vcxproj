@@ -129,6 +129,11 @@
     <ClInclude Include="src\camera.h" />
     <ClInclude Include="src\editor\Editor.h" />
     <ClInclude Include="src\editor\EditorState.h" />
+    <ClInclude Include="src\editor\Editor_Imgui\AssetModule.h" />
+    <ClInclude Include="src\editor\Editor_Imgui\CameraModule.h" />
+    <ClInclude Include="src\editor\Editor_Imgui\EditorImguiModules.h" />
+    <ClInclude Include="src\editor\Editor_Imgui\GridModule.h" />
+    <ClInclude Include="src\editor\Editor_Imgui\LayerModule.h" />
     <ClInclude Include="src\editor\Entity.h" />
     <ClInclude Include="src\editor\GridSettings.h" />
     <ClInclude Include="src\editor\Scene.h" />
@@ -146,7 +151,7 @@
     <ClCompile Include="src\camera.cpp" />
     <ClCompile Include="src\editor\AssetManager.cpp" />
     <ClCompile Include="src\editor\Editor.cpp" />
-    <ClCompile Include="src\editor\Editor_ImGui.cpp" />
+    <ClCompile Include="src\editor\Editor_Imgui\Editor_ImGui.cpp" />
     <ClCompile Include="src\editor\Editor_Input.cpp" />
     <ClCompile Include="src\editor\Editor_Render.cpp" />
     <ClCompile Include="src\editor\Editor_Scene.cpp" />

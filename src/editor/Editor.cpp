@@ -18,6 +18,7 @@ Editor::Editor(Window& window)
     initImGui();
     m_camera.setPosition(cameraX, cameraY);
     m_camera.setZoom(zoom);
+    m_camera.setVirtualSize(gameViewWidth, gameViewHeight); // Initialize camera virtual size
 
     // ===== Load shaders =====
     m_gridShader = Shader("src/shaders/grid.vert", "src/shaders/grid.frag");
@@ -389,5 +390,3 @@ void Editor::setupCallbacks() {
     glfwSetMouseButtonCallback(handle, staticMouseButtonCallback);
     glfwSetCursorPosCallback(handle, staticCursorPosCallback);
 }
-
-
