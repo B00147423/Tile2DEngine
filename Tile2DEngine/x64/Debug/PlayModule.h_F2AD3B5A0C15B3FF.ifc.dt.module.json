@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Tile2DEngine\\x64\\Debug\\PlayModule.obj",
+            "outputs": [
+                "Tile2DEngine\\x64\\Debug\\PlayModule.h_F2AD3B5A0C15B3FF.ifc.dt.module.json",
+                "Tile2DEngine\\x64\\Debug\\PlayModule.h_F2AD3B5A0C15B3FF.ifc.dt.d.json",
+                "Tile2DEngine\\x64\\Debug\\PlayModule.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\beka\\Tile2DEngine\\src\\editor\\Editor_Imgui\\PlayModule.h",
+                    "source-path": "c:\\users\\beka\\tile2dengine\\src\\editor\\editor_imgui\\playmodule.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

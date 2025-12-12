@@ -1,13 +1,5 @@
 ﻿#include "Editor.h"
 
-/**
- * Handle entity placement: Processes mouse clicks to place/remove entities on the grid.
- * Gets mouse world position, snaps it to grid, then:
- * - LEFT CLICK: Places a new entity at the snapped position (if not duplicate on same layer)
- * - RIGHT CLICK: Removes any entity at the snapped position
- * Prevents placing duplicates at the same position on the same layer. Sets
- * entitiesNeedSorting=true when entities are added/removed. Called every frame.
- */
 void Editor::handleEntityPlacement() {
     // Skip if mouse is over ImGui UI
     if (ImGui::GetIO().WantCaptureMouse)
@@ -19,8 +11,15 @@ void Editor::handleEntityPlacement() {
     float snappedX = std::floor(pos.x / cellWidth) * cellWidth + cellWidth * 0.5f;
     float snappedY = std::floor(pos.y / cellHeight) * cellHeight + cellHeight * 0.5f;
 
+    // --- Edge detection ---
+    static bool leftWasPressed = false;
+    static bool rightWasPressed = false;
+
+    bool leftPressed = glfwGetMouseButton(m_window.getHandle(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
+    bool rightPressed = glfwGetMouseButton(m_window.getHandle(), GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS;
+
     // LEFT CLICK — place entity
-    if (glfwGetMouseButton(m_window.getHandle(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+    if (leftPressed) {
         Entity entity;
         entity.type = selectedType;
         entity.x = snappedX;
@@ -30,7 +29,7 @@ void Editor::handleEntityPlacement() {
         // Prevent duplicates only on SAME LAYER
         bool alreadyPlaced = false;
         for (auto& existing : currentScene.entities) {
-            if (existing.layer == entity.layer &&         // ⭐ only block SAME layer
+            if (existing.layer == entity.layer &&   
                 std::abs(existing.x - entity.x) < 0.1f &&
                 std::abs(existing.y - entity.y) < 0.1f)
             {
@@ -41,14 +40,14 @@ void Editor::handleEntityPlacement() {
 
         if (!alreadyPlaced) {
             currentScene.entities.push_back(entity);
-            entitiesNeedSorting = true; // Mark for sorting
+            entitiesNeedSorting = true;
             std::cout << "Placed entity: " << entity.type
                 << " at (" << entity.x << ", " << entity.y << ")\n";
         }
     }
 
     //  RIGHT CLICK — remove entity
-    if (glfwGetMouseButton(m_window.getHandle(), GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
+    if (rightPressed) {
         for (auto it = currentScene.entities.begin(); it != currentScene.entities.end(); ++it) {
             if (std::abs(it->x - snappedX) < cellWidth * 0.5f &&
                 std::abs(it->y - snappedY) < cellHeight * 0.5f) {
@@ -62,12 +61,6 @@ void Editor::handleEntityPlacement() {
     }
 }
 
-/**
- * Process input: Handles keyboard input for camera movement (WASD keys).
- * Moves the camera up/down/left/right based on key presses, with movement speed
- * proportional to zoom level. Updates cameraX/cameraY and syncs to the Camera object.
- * Currently not called in run() loop -  code for future use if needed.
- */
 void Editor::processInput() {
     GLFWwindow* handle = m_window.getHandle();
     const float moveSpeed = 10.0f * zoom;
@@ -80,28 +73,45 @@ void Editor::processInput() {
     m_camera.setPosition(cameraX, cameraY);
 }
 
-/**
- * Get mouse world position: Converts screen mouse coordinates to world/grid coordinates.
- * Takes the window mouse position, accounts for the left panel offset, flips Y axis
- * (OpenGL Y=0 is bottom), converts to viewport space, then applies camera zoom and
- * position to get the final world coordinates. Used for placing entities at the cursor.
- */
 glm::vec2 Editor::getMouseWorldPosition() {
+    // Get current window size (updated each frame in run loop)
+    int currentWidth, currentHeight;
+    glfwGetWindowSize(m_window.getHandle(), &currentWidth, &currentHeight);
+
     double mouseX, mouseY;
     glfwGetCursorPos(m_window.getHandle(), &mouseX, &mouseY);
 
-    // Convert from window to grid viewport coordinates
+    // Viewport dimensions (grid area, excluding left panel)
+    int viewportWidth = currentWidth - kLeftPanelWidth;
+    int viewportHeight = currentHeight;
+
+    // Convert mouse position to viewport coordinates
     float viewX = static_cast<float>(mouseX) - kLeftPanelWidth;
     float viewY = static_cast<float>(mouseY);
-    viewY = windowHeight - viewY; // flip Y because OpenGL's Y=0 is bottom
 
-    // Center of the grid viewport
-    float halfW = (windowWidth - kLeftPanelWidth) * 0.5f;
-    float halfH = windowHeight * 0.5f;
+    // Flip Y axis (OpenGL Y=0 is at bottom, screen Y=0 is at top)
+    viewY = viewportHeight - viewY;
 
-    // Apply camera zoom & position
-    float worldX = (viewX - halfW) / m_camera.getZoom() + m_camera.getPosition().x;
-    float worldY = (viewY - halfH) / m_camera.getZoom() + m_camera.getPosition().y;
+    // Normalize to [-1, 1] range in viewport space
+    float normalizedX = (viewX / viewportWidth) * 2.0f - 1.0f;
+    float normalizedY = (viewY / viewportHeight) * 2.0f - 1.0f;
+
+    // Get camera properties
+    glm::vec2 camPos = m_camera.getPosition();
+    float zoom = m_camera.getZoom();
+
+    // Match camera projection calculation exactly
+    // Camera uses virtual size (default 1280x720) and aspect ratio
+    float virtualWidth = 1280.0f;  // Match camera's m_virtualWidth
+    float virtualHeight = 720.0f;   // Match camera's m_virtualHeight
+    float aspect = static_cast<float>(viewportWidth) / static_cast<float>(viewportHeight);
+
+    float halfHeight = (virtualHeight * 0.5f) / zoom;
+    float halfWidth = halfHeight * aspect;
+
+    // Convert normalized coordinates to world space
+    float worldX = camPos.x + normalizedX * halfWidth;
+    float worldY = camPos.y + normalizedY * halfHeight;
 
     return { worldX, worldY };
 }

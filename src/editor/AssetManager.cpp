@@ -8,19 +8,10 @@ std::unordered_map<std::string, GLuint> AssetManager::m_gpuTextures;
 std::vector<std::future<void>> AssetManager::m_loadingFutures;
 static std::mutex s_textureMutex;
 
-/**
- * Init: Initializes the AssetManager (currently does nothing, reserved for future setup).
- * Called once at startup before loading any assets.
- */
 void AssetManager::Init() {
     
 }
 
-/**
- * Shutdown: Cleans up all GPU textures and CPU data.
- * Deletes all OpenGL texture IDs and clears both CPU and GPU texture maps.
- * Called when the application exits to prevent memory leaks.
- */
 void AssetManager::Shutdown() {
     // Clean up GPU textures
     for (auto& [path, textureID] : m_gpuTextures) {
@@ -30,12 +21,6 @@ void AssetManager::Shutdown() {
     m_cpuTextures.clear();
 }
 
-/**
- * Load texture async: Loads a texture file from disk asynchronously on a background thread.
- * Returns a future that will contain a pointer to TextureData when loading completes.
- * The texture is loaded into CPU memory (pixels array). Thread-safe. Multiple textures
- * can be loaded in parallel. Call UploadAllTexturesToGPU() after all loads complete.
- */
 std::future<TextureData*> AssetManager::LoadTextureAsync(const std::string& path) {
     // This runs on a separate thread!
     return std::async(std::launch::async, [path]() -> TextureData* {
@@ -60,13 +45,6 @@ std::future<TextureData*> AssetManager::LoadTextureAsync(const std::string& path
         });
 }
 
-/**
- * Upload all textures to GPU: Batch uploads all loaded CPU textures to GPU memory.
- * Creates OpenGL texture objects, uploads pixel data, sets texture parameters
- * (CLAMP_TO_EDGE, NEAREST filtering), generates mipmaps, and stores GPU IDs.
- * This is FAST because it's a single batch operation. Must be called from main thread
- * (OpenGL context required). Call after all LoadTextureAsync() futures complete.
- */
 void AssetManager::UploadAllTexturesToGPU() {
     std::lock_guard<std::mutex> lock(s_textureMutex);
 
@@ -106,33 +84,18 @@ void AssetManager::UploadAllTexturesToGPU() {
     std::cout << "Batch upload complete!\n";
 }
 
-/**
- * Get texture data: Returns a pointer to the CPU-side texture data for a given path.
- * Returns nullptr if texture hasn't been loaded yet. Thread-safe. Used for accessing
- * texture metadata (width, height) or pixel data before GPU upload.
- */
 TextureData* AssetManager::GetTextureData(const std::string& path) {
     std::lock_guard<std::mutex> lock(s_textureMutex);
     auto it = m_cpuTextures.find(path);
     return (it != m_cpuTextures.end()) ? &it->second : nullptr;
 }
 
-/**
- * Get GPU handle: Returns the OpenGL texture ID for a given path.
- * Returns 0 if texture hasn't been uploaded to GPU yet. Thread-safe. This is what
- * you use for rendering - bind this ID with glBindTexture(GL_TEXTURE_2D, id).
- */
 GLuint AssetManager::GetGPUHandle(const std::string& path) {
     std::lock_guard<std::mutex> lock(s_textureMutex);
     auto it = m_gpuTextures.find(path);
     return (it != m_gpuTextures.end()) ? it->second : 0;
 }
 
-/**
- * Free CPU data: Frees the pixel data from all loaded textures to save RAM.
- * After GPU upload, the CPU pixel data is no longer needed. This frees that memory
- * while keeping the GPU textures intact. Call after UploadAllTexturesToGPU().
- */
 void AssetManager::FreeCPUDataForLoadedTextures() {
     std::lock_guard<std::mutex> lock(s_textureMutex);
     for (auto& [path, texture] : m_cpuTextures) {

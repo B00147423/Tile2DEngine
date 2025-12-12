@@ -1,15 +1,9 @@
 ﻿#include "Editor.h"
 #include "AssetManager.h"
 
-/**
- * Draw infinite grid: Renders the background grid and camera view box.
- * Updates camera projection, calculates visible grid bounds based on camera position
- * and zoom, generates grid line vertices dynamically (only visible lines), uploads
- * them to the cached gridVBO, and draws as GL_LINES. Then draws a red box showing
- * the game view bounds (gameViewWidth x gameViewHeight). Uses cached VAOs/VBOs and
- * uniform locations for performance. Called every frame.
- */
 void Editor::drawInfiniteGrid() {
+    // Don't update camera virtual size here - it causes zoom when editing red square
+    // Camera virtual size is set when loading scenes, not during editing
     m_camera.resize(windowWidth - kLeftPanelWidth, windowHeight);
     glm::mat4 proj = m_camera.getProjection();
 
@@ -82,14 +76,6 @@ void Editor::drawInfiniteGrid() {
     glDrawArrays(GL_LINES, 0, boxVertices.size() / 2);
 }
 
-/**
- * Draw entities: Renders all entities in the scene as textured quads.
- * First sorts entities by layer if entitiesNeedSorting flag is set (optimization:
- * only sort when entities change). Then for each entity: gets its texture from
- * AssetManager, builds a model matrix (translation + scale), computes MVP matrix,
- * uploads it to shader, binds texture, and draws a quad. Entities are drawn in
- * layer order (lower layers first). Called every frame.
- */
 void Editor::drawEntities() {
     glm::mat4 proj = m_camera.getProjection();
 

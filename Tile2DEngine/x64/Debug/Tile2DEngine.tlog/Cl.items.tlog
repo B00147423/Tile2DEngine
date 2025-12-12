@@ -1,7 +1,7 @@
 C:\Users\beka\Tile2DEngine\src\camera.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\camera.obj
 C:\Users\beka\Tile2DEngine\src\editor\AssetManager.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\AssetManager.obj
 C:\Users\beka\Tile2DEngine\src\editor\Editor.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor.obj
-C:\Users\beka\Tile2DEngine\src\editor\Editor_ImGui.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor_ImGui.obj
+C:\Users\beka\Tile2DEngine\src\editor\Editor_Imgui\Editor_ImGui.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor_ImGui.obj
 C:\Users\beka\Tile2DEngine\src\editor\Editor_Input.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor_Input.obj
 C:\Users\beka\Tile2DEngine\src\editor\Editor_Render.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor_Render.obj
 C:\Users\beka\Tile2DEngine\src\editor\Editor_Scene.cpp;C:\Users\beka\Tile2DEngine\Tile2DEngine\x64\Debug\Editor_Scene.obj
