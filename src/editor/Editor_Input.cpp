@@ -1,13 +1,5 @@
 ﻿#include "Editor.h"
 
-/**
- * Handle entity placement: Processes mouse clicks to place/remove entities on the grid.
- * Gets mouse world position, snaps it to grid, then:
- * - LEFT CLICK: Places a new entity at the snapped position (if not duplicate on same layer)
- * - RIGHT CLICK: Removes any entity at the snapped position
- * Prevents placing duplicates at the same position on the same layer. Sets
- * entitiesNeedSorting=true when entities are added/removed. Called every frame.
- */
 void Editor::handleEntityPlacement() {
     // Skip if mouse is over ImGui UI
     if (ImGui::GetIO().WantCaptureMouse)
@@ -18,7 +10,6 @@ void Editor::handleEntityPlacement() {
     // Snap to grid
     float snappedX = std::floor(pos.x / cellWidth) * cellWidth + cellWidth * 0.5f;
     float snappedY = std::floor(pos.y / cellHeight) * cellHeight + cellHeight * 0.5f;
-
 
     // --- Edge detection ---
     static bool leftWasPressed = false;
@@ -38,7 +29,7 @@ void Editor::handleEntityPlacement() {
         // Prevent duplicates only on SAME LAYER
         bool alreadyPlaced = false;
         for (auto& existing : currentScene.entities) {
-            if (existing.layer == entity.layer &&         // ⭐ only block SAME layer
+            if (existing.layer == entity.layer &&   
                 std::abs(existing.x - entity.x) < 0.1f &&
                 std::abs(existing.y - entity.y) < 0.1f)
             {
@@ -70,12 +61,6 @@ void Editor::handleEntityPlacement() {
     }
 }
 
-/**
- * Process input: Handles keyboard input for camera movement (WASD keys).
- * Moves the camera up/down/left/right based on key presses, with movement speed
- * proportional to zoom level. Updates cameraX/cameraY and syncs to the Camera object.
- * Currently not called in run() loop -  code for future use if needed.
- */
 void Editor::processInput() {
     GLFWwindow* handle = m_window.getHandle();
     const float moveSpeed = 10.0f * zoom;
@@ -88,13 +73,6 @@ void Editor::processInput() {
     m_camera.setPosition(cameraX, cameraY);
 }
 
-/**
- * Get mouse world position: Converts screen mouse coordinates to world/grid coordinates.
- * Takes the window mouse position, accounts for the left panel offset, flips Y axis
- * (OpenGL Y=0 is bottom), converts to viewport space, then applies camera zoom and
- * position to get the final world coordinates. Used for placing entities at the cursor.
- * This calculation matches the camera's projection matrix exactly.
- */
 glm::vec2 Editor::getMouseWorldPosition() {
     // Get current window size (updated each frame in run loop)
     int currentWidth, currentHeight;

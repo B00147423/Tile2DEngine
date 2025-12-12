@@ -1,12 +1,6 @@
 ﻿#include "Editor.h"
 #include "SceneSerializer.h"
 
-/**
- * New scene: Creates a blank new scene with the given name.
- * Sets scene name, initializes grid settings from current cellWidth/cellHeight,
- * clears all entities, and sets entitiesNeedSorting=false (empty list doesn't need sorting).
- * Called when user clicks "New Scene" or from menu.
- */
 void Editor::newScene(const std::string& name) {
     currentScene.name = name;
     currentScene.grid = { cellWidth, cellHeight, 20, 30 };
@@ -16,12 +10,6 @@ void Editor::newScene(const std::string& name) {
     entitiesNeedSorting = false; // No need to sort empty list
 }
 
-/**
- * Save scene: Saves the current scene to disk in both binary (.map) and JSON (.json) formats.
- * Binary format is fast for runtime loading, JSON is human-readable for debugging.
- * Uses SceneSerializer to do the actual file writing. Sets currentScene.path after
- * successful save. Prints errors if file operations fail. Called when user saves.
- */
 void Editor::saveScene(const std::string& path) {
     // Sync current editor values to scene before saving
     currentScene.gameViewWidth = gameViewWidth;
@@ -43,13 +31,6 @@ void Editor::saveScene(const std::string& path) {
     std::cout << "Saved scene: " << currentScene.name << " → " << path << "\n";
 }
 
-/**
- * Load scene: Loads a scene from a binary .map file.
- * Uses SceneSerializer to read the binary file, populates currentScene with the
- * loaded data (name, grid settings, entities), sets the scene path, and marks
- * entities for sorting. Prints error if file doesn't exist or is invalid.
- * Called when user opens a scene from the dialog.
- */
 void Editor::loadScene(const std::string& path) {
     if (!SceneSerializer::loadBinary(currentScene, path)) {
         std::cerr << "Failed to load binary scene: " << path << "\n";

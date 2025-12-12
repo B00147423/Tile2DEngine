@@ -1,12 +1,7 @@
 ﻿#include "Editor.h"
 #include "SceneSerializer.h"
 #include "AssetManager.h"
-// =========================================================
-// Constructor: Initializes the Editor with a reference to the Window.
-// Sets up GLFW user pointer for callbacks, initializes ImGui, loads shaders,
-// creates OpenGL buffers (VAOs/VBOs), loads all PNG assets from src/assets/,
-// and sets up input callbacks. This is where all the one-time setup happens.
-// =========================================================
+
 Editor::Editor(Window& window)
     : m_window(window)
 {
@@ -57,7 +52,7 @@ Editor::Editor(Window& window)
     glEnableVertexAttribArray(1);
 
 
-    // ===== Load asset list =====
+    // Load asset list 
     newScene("Untitled");
 
     std::string assetFolder = "src/assets";
@@ -116,11 +111,6 @@ Editor::Editor(Window& window)
 }
 
 
-// =========================================================
-// Destructor: Cleans up resources when the Editor is destroyed.
-// Shuts down ImGui, cleans up AssetManager, and OpenGL resources
-// (shaders auto-clean through their destructors).
-// =========================================================
 Editor::~Editor()
 {
     AssetManager::Shutdown();
@@ -130,11 +120,6 @@ Editor::~Editor()
 }
 
 
-// =========================================================
-// Initialize ImGui: Sets up the ImGui context, style, and platform/renderer bindings.
-// Creates the ImGui context, sets dark theme, and initializes GLFW and OpenGL3 backends.
-// Must be called before any ImGui calls. Called once in constructor.
-// =========================================================
 void Editor::initImGui()
 {
     IMGUI_CHECKVERSION();
@@ -145,11 +130,6 @@ void Editor::initImGui()
     ImGui_ImplOpenGL3_Init("#version 330");
 }
 
-/**
- * Shutdown ImGui: Cleans up ImGui resources when the editor closes.
- * Shuts down the OpenGL3 and GLFW backends, then destroys the ImGui context.
- * Called in destructor to prevent memory leaks.
- */
 void Editor::shutdownImGui()
 {
     ImGui_ImplOpenGL3_Shutdown();
@@ -157,14 +137,6 @@ void Editor::shutdownImGui()
     ImGui::DestroyContext();
 }
 
-
-/**
- * Initialize grid buffers: Creates and caches OpenGL VAOs/VBOs for grid rendering.
- * Creates gridVAO/gridVBO for drawing grid lines, and boxVAO/boxVBO for the camera
- * view box. Sets up vertex attribute pointers. Also caches uniform locations from
- * the shaders (uProjectionLoc, uGridColorLoc, uMVPLoc) to avoid lookups every frame.
- * MUST be called AFTER shaders are loaded (needs shader IDs). Called once in constructor.
- */
 void Editor::initGridBuffers() {
     if (gridBuffersInitialized) return;
 
@@ -208,14 +180,6 @@ void Editor::initGridBuffers() {
     gridBuffersInitialized = true;
 }
 
-
-
-// =========================================================
-// Main run loop: The heart of the editor. Runs continuously until the window closes.
-// Each frame it: polls events, updates ImGui, handles entity placement, renders
-// the grid and entities, renders ImGui UI, and swaps buffers. This is called
-// once from main() and runs until the user closes the window.
-// =========================================================
 void Editor::run()
 {
     while (!m_window.shouldClose())
@@ -276,12 +240,6 @@ void Editor::run()
     }
 }
 
-// =========================================================
-// Static scroll callback: GLFW requires static functions for callbacks, but we need
-// instance methods. This retrieves the Editor instance from GLFW's user pointer
-// and forwards the scroll event to handleScroll(). Also forwards to ImGui so it
-// can handle scrolling in UI elements. Called by GLFW when the mouse wheel is scrolled.
-// =========================================================
 void Editor::staticScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
     ImGui_ImplGlfw_ScrollCallback(window, xoffset, yoffset);
     
@@ -291,12 +249,6 @@ void Editor::staticScrollCallback(GLFWwindow* window, double xoffset, double yof
     }
 }
 
-/**
- * Static mouse button callback: GLFW callback for mouse button presses/releases.
- * Retrieves the Editor instance from the user pointer and forwards to handleMouseButton().
- * Also forwards to ImGui for UI interaction. Called by GLFW when any mouse button
- * is pressed or released (left, right, middle, etc.).
- */
 void Editor::staticMouseButtonCallback(GLFWwindow* window, int button, int action, int mods) {
     ImGui_ImplGlfw_MouseButtonCallback(window, button, action, mods);
     
@@ -306,11 +258,6 @@ void Editor::staticMouseButtonCallback(GLFWwindow* window, int button, int actio
     }
 }
 
-/**
- * Static cursor position callback: GLFW callback for mouse movement.
- * Retrieves the Editor instance and forwards to handleCursorPos() for panning logic.
- * Also forwards to ImGui. Called continuously by GLFW as the mouse moves.
- */
 void Editor::staticCursorPosCallback(GLFWwindow* window, double xpos, double ypos) {
     ImGui_ImplGlfw_CursorPosCallback(window, xpos, ypos);
     
@@ -320,12 +267,6 @@ void Editor::staticCursorPosCallback(GLFWwindow* window, double xpos, double ypo
     }
 }
 
-// =========================================================
-// Handle scroll input: Processes mouse wheel scrolling to zoom in/out.
-// Multiplies or divides zoom by zoomSpeed (1.1) based on scroll direction,
-// clamps zoom between 0.1 and 100.0, and updates the camera. This is where
-// the actual zoom logic happens - the static callback just routes here.
-// =========================================================
 void Editor::handleScroll(double xoffset, double yoffset) {
     const float zoomSpeed = 1.1f;
     if (yoffset > 0)
@@ -337,12 +278,6 @@ void Editor::handleScroll(double xoffset, double yoffset) {
     m_camera.setZoom(zoom);
 }
 
-/**
- * Handle mouse button input: Processes mouse button presses, specifically
- * the middle mouse button for panning. When middle button is pressed, sets
- * isPanning=true and stores the current mouse position. When released, sets
- * isPanning=false. Left/right clicks are handled elsewhere (handleEntityPlacement).
- */
 void Editor::handleMouseButton(int button, int action, int mods) {
     if (button == GLFW_MOUSE_BUTTON_MIDDLE) {
         if (action == GLFW_PRESS) {
@@ -355,12 +290,6 @@ void Editor::handleMouseButton(int button, int action, int mods) {
     }
 }
 
-/**
- * Handle cursor movement: Processes mouse movement for camera panning.
- * Only does anything if isPanning is true (middle mouse held). Calculates
- * the delta movement, converts it to world space based on zoom level, and
- * updates cameraX/cameraY. This allows dragging the view around with middle mouse.
- */
 void Editor::handleCursorPos(double xpos, double ypos) {
     if (!isPanning) return;
 
@@ -377,12 +306,6 @@ void Editor::handleCursorPos(double xpos, double ypos) {
     m_camera.setPosition(cameraX, cameraY);
 }
 
-/**
- * Setup callbacks: Registers all the static callback functions with GLFW.
- * This must be called after the window is created and the user pointer is set.
- * Connects GLFW's input events to our Editor instance methods via the static
- * forwarder functions. Called once in the constructor.
- */
 void Editor::setupCallbacks() {
     auto* handle = m_window.getHandle();
     

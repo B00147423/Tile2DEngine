@@ -128,7 +128,6 @@
   <ItemGroup>
     <ClInclude Include="src\camera.h" />
     <ClInclude Include="src\editor\Editor.h" />
-    <ClInclude Include="src\editor\EditorState.h" />
     <ClInclude Include="src\editor\Editor_Imgui\AssetModule.h" />
     <ClInclude Include="src\editor\Editor_Imgui\CameraModule.h" />
     <ClInclude Include="src\editor\Editor_Imgui\EditorImguiModules.h" />

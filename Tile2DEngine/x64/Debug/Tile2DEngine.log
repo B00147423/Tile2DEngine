@@ -1,7 +1,20 @@
 ﻿  Scanning sources for module dependencies...
+  AssetManager.h
+  Compiling...
+  AssetManager.h
+  AssetManager.cpp
+  Editor.cpp
   Editor_ImGui.cpp
 C:\Users\beka\Tile2DEngine\src\editor\Editor_Imgui\Editor_ImGui.cpp(13,54): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Editor_Input.cpp
+  Editor_Render.cpp
+C:\Users\beka\Tile2DEngine\src\editor\Editor_Render.cpp(53,51): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+C:\Users\beka\Tile2DEngine\src\editor\Editor_Render.cpp(76,50): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  Editor_Scene.cpp
+C:\Users\beka\Tile2DEngine\src\editor\Editor_Scene.cpp(31,58): warning C4566: character represented by universal-character-name '\u2192' cannot be represented in the current code page (1252)
+  SceneSerializer.cpp
+  Shader.cpp
+  TextureData.cpp
   main.cpp
   Generating Code...
   Tile2DEngine.vcxproj -> C:\Users\beka\Tile2DEngine\x64\Debug\Tile2DEngine.exe
